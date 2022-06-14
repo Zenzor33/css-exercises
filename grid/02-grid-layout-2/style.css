@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
 }
@@ -8,6 +9,11 @@ body, html {
   height: 100%;
   padding: 16px;
   box-sizing: border-box;
+  /* solution */
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 1fr 5fr 1fr;
+  gap: 15px;
 }
 
 .container div {
@@ -20,21 +26,27 @@ body, html {
 }
 
 .header {
-  background-color: #FFDE22;
+  background-color: #ffde22;
+  /* grid-column-start: 1;
+  grid-column-end: 3; */
   grid-column: 1 / 3;
 }
 
 .sidebar {
-  background-color: #FF7755;
+  background-color: #ff7755;
+  /* grid-row-start: 2;
+  grid-row-end: 4; */
   grid-row: 2 / 4;
 }
 
 .nav {
-  background-color: #00DDFF;
+  background-color: #00ddff;
+  /* grid-row-start: 2; */
 }
 
 .article {
   background-color: #bccbde;
+  /* grid-row-start: 3; */
 }
 
 .article p {
@@ -46,5 +58,7 @@ body, html {
 
 .footer {
   background-color: #393f4d;
+  /* grid-column-start: 1;
+  grid-column-end: 3; */
   grid-column: 1 / 3;
 }
